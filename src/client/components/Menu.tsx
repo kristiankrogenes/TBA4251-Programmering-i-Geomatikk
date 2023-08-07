@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const HeaderContainer = styled.div`
-    height: 50px;
+const MenuContainer = styled.div`
+    height: 100%;
     width: 100%;
     background: #cfcfcf;
-    display: flex;
-    align-items: center;
 `;
 
 const HeaderText = styled.div`
@@ -14,12 +12,12 @@ const HeaderText = styled.div`
     text-align: center;
 `;
 
-function Header() {
+function Menu() {
   return (
-    <HeaderContainer>
+    <MenuContainer>
         <HeaderText>PIGGIS</HeaderText>
-    </HeaderContainer>
+    </MenuContainer>
   );
 }
 
-export default Header;
+export default Menu;

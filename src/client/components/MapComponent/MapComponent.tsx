@@ -19,8 +19,8 @@ function MapComponent() {
         <Map
             style={mapStyle}
             containerStyle={{
-                height: '90vh',
-                width: '100vw'
+                height: '100%',
+                width: '100%'
             }}
             zoom={[initialViewState.zoom]}
             center={[initialViewState.longitude, initialViewState.latitude]}
