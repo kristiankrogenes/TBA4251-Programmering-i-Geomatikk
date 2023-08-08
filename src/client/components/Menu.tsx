@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import GeoJSONUploader from '../services/GeoJSONUploader';
 
 const MenuContainer = styled.div`
     height: 100%;
@@ -13,9 +14,16 @@ const HeaderText = styled.div`
 `;
 
 function Menu() {
+
+  const handleUpload = (geojsonData: any) => {
+    // Do something with the uploaded GeoJSON data
+    console.log('Uploaded GeoJSON data:', geojsonData);
+  };
+
   return (
     <MenuContainer>
-        <HeaderText>PIGGIS</HeaderText>
+      <HeaderText>PIGGIS</HeaderText>
+      <GeoJSONUploader onUpload={handleUpload} />
     </MenuContainer>
   );
 }

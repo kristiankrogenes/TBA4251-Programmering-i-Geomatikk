@@ -8,9 +8,12 @@ import {
     MAPBOX_TOKEN,
     mapStyle,
     initialViewState,
-    polygon1,
+    // polygon1,
     polygonLayerStyle,
 } from './constants';
+
+
+import geojsonData from '../../data/buildings_trondheim.geojson';
 
 function MapComponent() {
 
@@ -20,7 +23,7 @@ function MapComponent() {
           mapStyle={mapStyle}
           mapboxAccessToken={MAPBOX_TOKEN}
         >
-            <Source id="polygon-source" type="geojson" data={polygon1}>
+            <Source id="polygon-source" type="geojson" data={geojsonData}>
                 <Layer {...polygonLayerStyle} />
             </Source>
         </Map>
